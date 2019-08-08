@@ -18,13 +18,13 @@ class BinaryTree:
     def addNode(self, root, value):
         if root == None:
             return
-        if root.value < value:
+        if root.value > value:
             if root.left == None:
                 root.left = Node(value)
             else:
                 root = root.left
                 self.addNode(root, value)
-        elif root.value > value:
+        elif root.value < value:
             if root.right == None:
                 root.right = Node(value)
             else:
